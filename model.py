@@ -6,6 +6,7 @@ def load_model():
         "text-generation",
         model=model_id,
         torch_dtype="auto",
-        device_map="auto"
+        device_map="auto",
+        trust_remote_code=True
     )
     return pipe
